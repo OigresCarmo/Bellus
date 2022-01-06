@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Sorveteria",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
