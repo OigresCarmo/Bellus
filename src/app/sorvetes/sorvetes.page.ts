@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @Component({
   selector: 'app-sorvetes',
   templateUrl: './sorvetes.page.html',
@@ -7,7 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SorvetesPage implements OnInit {
 
-  constructor() { }
+  lista: any = [];
+
+  constructor(public http: HttpClient){
+      this.escreveDados();
+    }
+
+  escreveDados(){
+      this.http.get("https://manobatatao.000webhostapp.com/novo1.php").subscribe( data => {
+        this.lista = data;
+       } )
+  }
+
+
+
 
   ngOnInit() {
   }
@@ -99,5 +114,8 @@ const slideOpts = {
         .find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left')
         .transition(duration);
     }
+
   }
+
+
 }
