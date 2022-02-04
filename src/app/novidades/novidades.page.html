@@ -3,33 +3,28 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Bellus Cataguases</ion-title>
+    <ion-title>Bellus Estética</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-<ion-card color="rosa">
-  <ion-card-header>
-    <ion-card-subtitle>Estética Corporal e Estética Facial.</ion-card-subtitle>
+<ion-content color="rosa">
+  <ion-card>
+  <ion-item color="branco" *ngFor="let product of card">
 
-  </ion-card-header>
+      <ion-img src="https://manobatatao.000webhostapp.com/postphp/foto{{product.codigo}}.jpg"></ion-img>
+      <ion-card-header>
 
-  <ion-card-content>
-    Venha conferir as nossas promoções,agende logo sua avaliação!.<br>
-    #VEMSERBELLUS
-  </ion-card-content>
-</ion-card>
-
-
-
-
-
+        <ion-title>&nbsp;{{product.nome}}</ion-title>
+        <ion-card-content>
+        <p>{{product.texto}}</p>
+        <ion-card-subtitle><a href="https://www.instagram.com/sejabellus/">Nosso Instagram venha conferir!</a></ion-card-subtitle>
+      </ion-card-content>
+      </ion-card-header>
+  </ion-item>
+  </ion-card>
 
 
 
 
 
-
-
-<ion-content>
 
 </ion-content>
